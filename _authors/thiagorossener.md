@@ -1,11 +1,11 @@
 ---
 layout: author
 photo: /assets/img/uploads/profile.png
-name: thiagorossener
-display_name: Thiago Rossener
+name: cirius
+display_name: cirius
 position: Chief Editor
-bio: Just a developer.
-github_username: thiagorossener
+bio: Noob
+github_username: hellrider9
 facebook_username: thiagorossener
 twitter_username: thiagorossener
 instagram_username: thiagorossener
