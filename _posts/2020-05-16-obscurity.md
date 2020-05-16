@@ -125,7 +125,7 @@ wfuzz -w /root/DirectoryfUZZ/directories --sc 200,301,302 -t 40 http://obscure.h
 ```
 ![placeholder](/writeup/assets/img/obscurity/wfuzz.png "wfuzz")
 Got a directory named develop;visiting  /develop/supersecureserver.py gives a python script that is being used by the server to handle requests.
-Looking through the script a line of code inside the *ServeDoc* function looks appealing, 
+Looking through the script a line of code inside the ***ServeDoc*** function looks appealing, 
 ![placeholder](/writeup/assets/img/obscurity/script.png "script")
 The path variable goes through the exec function,this can be used to perform remote code execution.
 The following payload exploits this line of code
@@ -314,6 +314,6 @@ john --wordlist=rockyou.txt hash
 **root:mercedes**        
  Logged in and got the root.txt
  
- 
- ### Thoughts
+
+## Thoughts
  This box was totally unique with it's approach.Creating the exploits yourself was fun.
