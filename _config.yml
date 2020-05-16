@@ -42,7 +42,7 @@ two_columns_layout: true
 # Advanced Settings
 baseurl: "/writeup"
 url: "https://hellrider9.github.io/" # the base hostname & protocol for your site
-google_analytics: "UA-XXXXXXXX-X"
+google_analytics: "UA-XXXXXXXX-"
 language: "en"
 categories_folder: category
 sent_message_url: "/contact/message-sent/"
@@ -56,7 +56,7 @@ collections:
   authors:
     output: true
 paginate_path: "/page/:num/"
-show_get_theme_btn: true
+show_get_theme_btn: false
 use_logo: false
 
 # Content paginator
@@ -100,4 +100,3 @@ exclude: [
 ]
 
 # Theme
-version: v3.1.0
