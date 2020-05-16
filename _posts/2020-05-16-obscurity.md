@@ -260,11 +260,14 @@ print(key)
  
  Used the extracted key with the SuperSecureCrypt.py to decrypt the passwordreminder.txt
  
- Found the password for the robert user
+ Found the password for the robert user.
+ 
  **robert:SecThruObsFTW**
+ 
  Got the user.txt
+ 
  Inside the robert's home directory a directory BetterSSH was containing a python script BetterSSH.py
- *sudo -l* shows that we can run this BetterSSH.py with root privileges.
+ ***sudo -l*** shows that we can run this BetterSSH.py with root privileges.
 ```python
 *
 *
@@ -304,7 +307,7 @@ while True:
       exit(0)
 ```
 Ran this script and then ran the BetterSSH.py in another window.Got the password hashes.
-Using *john* decrypted the hashes to get the password for root
+Using ***john*** decrypted the hashes to get the password for root
 ```bash
 john --wordlist=rockyou.txt hash
 ```
@@ -312,5 +315,5 @@ john --wordlist=rockyou.txt hash
  Logged in and got the root.txt
  
  
- #Thoughts
+ ### Thoughts
  This box was totally unique with it's approach.Creating the exploits yourself was fun.
