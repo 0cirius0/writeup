@@ -6,7 +6,7 @@ subtitle: Hackthebox
 description: Medium box from Hackthebox
 image: /writeup/assets/img/obscurity/obscurity.png
 optimized_image:
-category:
+category: Hackthebox
 tags: Hackthebox
 author:
 paginate: false
