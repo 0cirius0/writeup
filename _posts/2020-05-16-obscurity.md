@@ -4,10 +4,10 @@ layout: post
 title: "Obscurity"
 subtitle: Hackthebox
 description: Medium box from Hackthebox
-image: /writeup/assets/img/obscurity.png
+image: /writeup/assets/img/obscurity/obscurity.png
 optimized_image:
 category:
-tags:
+tags: Hackthebox
 author:
 paginate: false
 ---
