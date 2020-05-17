@@ -4,10 +4,10 @@ layout: post
 title: "Openadmin"
 subtitle: Hackthebox
 description:
-image:
+image: /writeup/assets/img/openadmin/openadmin.png
 optimized_image:
 category: Hackthebox
-tags:
+tags: OpenNetadmin
 author:
 paginate: false
 ---
