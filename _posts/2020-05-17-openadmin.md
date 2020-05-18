@@ -46,9 +46,9 @@ Fuzzing for directories and pages
 ```bash
 ffuf -w wordlist -u http://10.10.10.171/FUZZ -e .php,.html
 ```
-We get a directory **/music** and **/ona**.
+We get directories **/music** and **/ona**.
 ![placeholder](/writeup/assets/img/openadmin/music.png "website")
-Music directory contains a fine website and the ona directory contains the OpenNetAdmin panel.
+Music directory contains a fine website and ona directory contains the OpenNetAdmin panel.
 ![placeholder](/writeup/assets/img/openadmin/panel.png "ona")
 
 The version of opennetadmin is 18.1.1 which is vulnerable to a remote code execution exploit.
@@ -60,7 +60,7 @@ exp.sh http://10.10.10.171/ona/
 ```
 ![placeholder](/writeup/assets/img/openadmin/shell.png "shell")
 
-Eumerating thorugh the machine we get a file */var/www/ona/local/config* which contains password for suer jimmy.
+Eumerating thorugh the machine we get a file */var/www/ona/local/config* which contains password for user jimmy.
 
 **jimmy:n1nj4W4rri0R!**
 

