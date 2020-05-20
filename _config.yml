@@ -40,7 +40,7 @@ two_columns_layout: true
 
 
 # Advanced Settings
-baseurl: "/writeup"
+baseurl: "/writeup/"
 url: "https://hellrider9.github.io/" # the base hostname & protocol for your site
 google_analytics: "UA-XXXXXXXX-"
 language: "en"
