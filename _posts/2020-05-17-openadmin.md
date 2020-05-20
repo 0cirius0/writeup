@@ -1,5 +1,5 @@
 ---
-date: 2020-05-17 06:52:37
+date: 2020-05-17
 layout: post
 title: "Openadmin"
 subtitle: Hackthebox

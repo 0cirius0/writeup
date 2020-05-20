@@ -1,5 +1,5 @@
 ---
-date: 2020-05-16 19:31:02
+date: 2020-05-16
 layout: post
 title: "Obscurity"
 subtitle: Hackthebox

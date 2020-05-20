@@ -1,14 +1,14 @@
-name: cirius
-title: Jekflix | writeups
-description: Jekflix is a template for Jekyll inspired by Netflix and made by Thiago Rossener.
+name: cirius' Writeups
+title: cirius | writeups
+description: This Blog contains the writeups of machine from hackthebox and tryhackme
 tags:
   - blog
-  - template
-  - jekyll
-  - theme
-  - netlify
-email: youremail@xyz.com
-disqus_username: disqus_username
+  - tryhackme
+  - hackthebox
+  - writeup
+  - cirius
+email: 
+disqus_username: 
 show_hero: true
 menu:
   - title: Home
