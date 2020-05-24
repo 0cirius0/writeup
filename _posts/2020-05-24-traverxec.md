@@ -289,6 +289,7 @@ I came to know that journalctl invokes **less** pager.
 The way to gain root shell with this method is kinda weird.
 
 Made the size of shell to be less than what the above command needed to show full output.
+![placeholder](/writeup/assets/img/traverxec/size.png "size")
 
 Ran the above journalctl command and then typed !/bin/sh
 
@@ -297,7 +298,7 @@ This gave the root shell.
 This code execution happens because
 
 **Many commands use less or more to show the result but if the terminal size is not enough then a pager is spawned beacause less and more are pager programs. 
- A pager can accept commands if the commands are prepended with !**
+ A pager can accept commands if the commands are prepended with "!"**
  
  Got the root.txt
  
