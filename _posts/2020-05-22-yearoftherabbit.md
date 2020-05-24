@@ -11,6 +11,8 @@ tags: medium,tryhackme
 author: cirius
 paginate: false
 ---
+<a href="https://tryhackme.com/room/yearoftherabbit">Link</a> to the machine on Tryhackme.
+
  Staring with nmap scan to look for open ports,
  ```bash
 $ nmap -T4 -p- -A 10.10.45.92

@@ -11,7 +11,7 @@ tags: tryhackme ftp
 author: cirius
 paginate: false
 ---
-<a href="https://tryhackme.com/room/anonymous">Link</a> to the the Machine on tryhackme. 
+<a href="https://tryhackme.com/room/anonymous">Link</a> to the the Machine on Tryhackme. 
 
 Starting with the nmap scan
 ```bash
