@@ -7,7 +7,7 @@ description: Medium Machine from Tryhackme
 image: /writeup/assets/img/yearoftherabbit/year.png
 optimized_image:
 category: tryhackme
-tags: medium,tryhackme
+tags: medium tryhackme
 author: cirius
 paginate: false
 ---
