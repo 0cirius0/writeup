@@ -9,4 +9,4 @@ permalink: /about/
 
 # About
 
-I am a student who is learning pentesting. I write here the details of how I rooted machines on tryhackme and hackthebox.
+I am a student learning pentesting. I write here the details of how I rooted machines on tryhackme and hackthebox.
