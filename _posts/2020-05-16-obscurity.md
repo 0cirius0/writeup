@@ -268,8 +268,7 @@ print(key)
  
  Found the password for the robert user.
  
- **robert:SecThruObsFTW**
- 
+ Logged in through SSH as user robert. 
  Got the user.txt
  
  Inside the robert's home directory a directory BetterSSH was containing a python script BetterSSH.py
@@ -318,8 +317,7 @@ Using ***john*** decrypted the hashes to get the password for root
 john --wordlist=rockyou.txt hash
 ```
 Got the password for root
-
-**root:mercedes**        
+       
  Logged in and got the root.txt
  
 

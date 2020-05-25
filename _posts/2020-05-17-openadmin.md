@@ -62,8 +62,6 @@ exp.sh http://10.10.10.171/ona/
 
 Eumerating thorugh the machine we get a file */var/www/ona/local/config* which contains password for user jimmy.
 
-**jimmy:n1nj4W4rri0R!**
-
 Inside the /var/www directory, we get a direcctory named Internal . index.php isnide the internal directory contains a username jimmy and a hash which on reverse lookup comes to be **Revealed**.
 Looking for open ports
 ```bash
@@ -104,13 +102,13 @@ curl  -s http://127.0.0.1:52846/main.php -b cookie
 #-b to fetch the cookie named cookie
 ```
 We get the ssh private key for user joanna.
-Cracking the key with john shows the passphrase **bloodninjas**
+Cracking the key with john shows the passphrase.
 
 ```bash
 $ ssh2john.py priv_key > hash
 $ john --wordlist=rockyou.txt hash
 ```
-Logged in thorugh ssh.
+Logged in thorugh ssh using the private key.
 
 ```bash
 ssh -i priv_key joanna@10.10.10.171
