@@ -99,7 +99,6 @@ hydra -l ftpuser -P passwords 10.10.45.92 ftp -V
 ![placeholder](/writeup/assets/img/yearoftherabbit/hydra.png "hydra")
 
 This gave me the correct passsword for the ftpuser.
-***ftpuser:5iez1wGXKfPKQ***
 
 Logged in inside ftp using the above credentials.
 ```bash
@@ -127,8 +126,6 @@ Used <a href="https://www.dcode.fr/brainfuck-language">decode.fr></a> website to
 ![placeholder](/writeup/assets/img/yearoftherabbit/brainfuck.png "brainfuck")
 This gave the SSH credentials for user eli.
 
-***eli:DSpDiM1wAEwid***
-
 Logging In through SSH , a message was displayed 
 ![placeholder](/writeup/assets/img/yearoftherabbit/ssh.png "ssh")
 
@@ -143,9 +140,6 @@ This gave a location where this directory was located, */usr/games/s3cr3t*
 Inside the s3cr3t directory, there was a file named **.th1s_m3ss4ag3_15_f0r_gw3nd0l1n3_0nly\!**
 
 Inside the file found the password for gwendoline user.
-Now I can write that in a proper format,
-
-***gwendoline:MniVCQVhQHUNI***
 
 Used the password to switch user.
 
