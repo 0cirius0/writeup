@@ -161,6 +161,7 @@ fg
 ```
 Enumerating the machine for potential priv esc vectors I reached to nhttpd.conf inside /var/nostromo/conf.
 The .htpasswd file inside this directory contained creds
+
 ```text
 david:$1$e7NfNpNi$A6nCwOTqrNR2oDuIKirRZ/
 ```
@@ -174,13 +175,12 @@ Loaded 1 password hash (md5crypt, crypt(3) $1$ (and variants) [MD5 256/256 AVX2 
 Will run 8 OpenMP threads
 Press 'q' or Ctrl-C to abort, almost any other key for status
 0g 0:00:00:15 23.93% (ETA: 13:26:26) 0g/s 237113p/s 237113c/s 237113C/s sophy06..sophieden
-Nowonly4me       (david)
+N*******m*       (david)
 1g 0:00:00:47 DONE (2020-05-24 13:26) 0.02088g/s 220936p/s 220936c/s 220936C/s NuiMeanPoon..Nous4=5
 Use the "--show" option to display all of the cracked passwords reliably
 Session completed
 ```
-Now I have creds
-***david:Nowonly4me***
+Now I have creds for user david.
 
 The conf file allowed a directory named "public_www" inside home directory of users of the machine to be accessible on the website. Look the **#HOMEDIRS** section of conf file.
 ```conf
