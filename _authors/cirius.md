@@ -1,6 +1,6 @@
 ---
 layout: author
-photo: /assets/img/uploads/profile.png
+photo: /writeup/assets/img/uploads/profile.png
 name: cirius
 display_name: cirius
 position: Editor
