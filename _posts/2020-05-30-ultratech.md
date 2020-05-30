@@ -110,7 +110,7 @@ http://10.10.117.219/ping?ip=10.9.12.192 `whoami`
 ```
 ![placeholder](/writeup/assets/img/ultratech/rce.png "rce")
 
-Running **ls** on the machine through the ap shows a file named **utech.db.sqlite**.
+Running **ls** on the machine through the api shows a file named **utech.db.sqlite**.
 Listed contents of it with cat.
 
 The file contained password hashes of two accounts; admin and r00t.
