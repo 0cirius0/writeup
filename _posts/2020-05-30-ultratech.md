@@ -11,13 +11,13 @@ tags: medium
 author: cirius
 paginate: false
 ---
-<a href=https://tryhackme.com/room/ultratech1>Link</a> to the machine on tryhackme.
+<a href="https://tryhackme.com/room/ultratech1">Link</a> to the machine on tryhackme.
 
 Starting with the nmap scan
 ```bash
 nmap -T4 -p- -A 10.10.119.217
 Starting Nmap 7.70 ( https://nmap.org ) at 2020-04-09 22:56 IST
-Nmap scan report for 10.10.212.199
+Nmap scan report for 10.10.119.217
 Host is up (0.44s latency).
 
 PORT     STATE SERVICE VERSION
@@ -42,7 +42,7 @@ Network Distance: 2 hops
 TRACEROUTE (using port 21/tcp)
 HOP RTT       ADDRESS
 1   194.42 ms 10.8.0.1
-2   195.05 ms 10.10.212.199
+2   195.05 ms 10.10.119.217
 
 OS and Service detection performed. Please report any incorrect results at https://nmap.org/submit/ .
 Nmap done: 1 IP address (1 host up) scanned in 36.09 seconds
