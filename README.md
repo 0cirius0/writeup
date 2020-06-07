@@ -1,2 +1,2 @@
-This repo contains the writeups of machines done by me on Hackthebox and Tryhackme
+This repo contains the writeups of machines rooted by me on Hackthebox and Tryhackme
 
