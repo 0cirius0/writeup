@@ -71,6 +71,7 @@ There were in total 4 users on the machine.
 ![placeholder](/writeup/assets/img/wonderland/users.png "users")
 A python script was also present in the home directory and running ***sudo -l***, showed that alice user can run the script as user rabbit.
 Enumerating the machine, I found that root directory was accessible by everyone though read permission was not given but execute permission was present.
+Since read permission is not there so I can't list the directory but can see the contents of files present in the directory becuase of execute permission if I know the name.
 ```
 cd /root/
 cat user.txt
