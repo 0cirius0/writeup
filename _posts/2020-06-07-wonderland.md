@@ -4,7 +4,7 @@ layout: post
 title: "Wonderland"
 subtitle: Medium Machine from Tryhackme
 description: 
-image: /assets/img/wonderland/wonderland.png
+image: /writeup/assets/img/wonderland/wonderland.png
 optimized_image:
 category: Tryhackme
 tags: 
@@ -45,12 +45,12 @@ Nmap done: 1 IP address (1 host up) scanned in 35.07 seconds
 Only two ports were open on the machine, 22 and 80.
 
 Proceeded with port 80, visited the website hosted on the port.
-![placeholder](/assets/img/wonderland/site.png "site")
+![placeholder](/writeup/assets/img/wonderland/site.png "site")
 Site said Follow the white rabbit. Nothing interesting in the source.So,started fuzzing for hidden directories and pages.
 ```bash
 ffuf -w /root/Documents/Fuzz/fuzzdir -u "http://10.10.58.164/FUZZ" -e .php,.html,.txt,.asp,.aspx,.zip
 ```
-![placeholder](/assets/img/wonderland/fuzz.png "fuzz")
+![placeholder](/writeup/assets/img/wonderland/fuzz.png "fuzz")
 This shows a directory named **r**.So now it is quite  guessable what the home page meant by following the rabbit.
 There were directories like /r/a/b/b/i/t/
 Inside the directory at the url
@@ -58,17 +58,17 @@ Inside the directory at the url
 http://10.10.58.164/r/a/b/b/i/t/
 ```
 The page said ***"Open the door and enter wonderland"***
-![placeholder](/assets/img/wonderland/enter.png "enter")
+![placeholder](/writeup/assets/img/wonderland/enter.png "enter")
 
 In the source of the page the password for alice user was present.
 
-![placeholder](/assets/img/wonderland/alice.png "alice")
+![placeholder](/writeup/assets/img/wonderland/alice.png "alice")
 
 Logged in through SSH as Alice user.
 
 But instead of user.txt, root.txt was present inside the home directory of the Alice user, although it was only accessible by root.
 There were in total 4 users on the machine.
-![placeholder](/assets/img/wonderland/users.png "users")
+![placeholder](/writeup/assets/img/wonderland/users.png "users")
 A python script was also present in the home directory and running ***sudo -l***, showed that alice user can run the script as user rabbit.
 Enumerating the machine, I found that root directory was accessible by everyone though read permission was not given but execute permission was present.
 ```
@@ -167,7 +167,7 @@ fg
 
 Inside the rabbit user's home directory, I found a SUID binary named teaParty.
 Listing the contents of the binary found some information between malformed characters.
-![placeholder](/assets/img/wonderland/teaparty.png "teaparty")
+![placeholder](/writeup/assets/img/wonderland/teaparty.png "teaparty")
 
 So this binary was executing date command to present the output.
 Since this was a SUID binary so,when it will run it will use PATH as of the user who is executing(rather than the case in sudo where the path used is already specified in sudoers file.)
@@ -204,7 +204,7 @@ perl -e 'use POSIX qw(setuid); POSIX::setuid(0); exec "/bin/sh";'
 ```
 
 Got the shell and the root.txt placed at /home/alice.
-![placeholder](/assets/img/wonderland/root.png "root")
+![placeholder](/writeup/assets/img/wonderland/root.png "root")
 
 
     
