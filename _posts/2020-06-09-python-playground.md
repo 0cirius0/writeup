@@ -264,7 +264,7 @@ chown root bash
 chmod u+s ./bash
 ```
 
-Now ran ***bash -p *** in host to get the root shell.
+Now ran ***./bash -p *** in host to get the root shell.
 ![placeholder](/writeup/assets/img/playground/root.png "root")
 Got the last flag.
 
