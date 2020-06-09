@@ -256,7 +256,7 @@ I thought maybe somehow they are connected and sharing same data.
 
 I visited the directory where the logs are stored in Linux /var/logs and found that this location is directly linked to the /mnt/log in container and if I write something through the conatiner then that file is written with root as owner for both the host and the container.
 
-Changed the permissions of /mnt/log directory to make /var/logs writable by connor,***chmod 777 .***
+Changed the permissions of /mnt/log directory to make /var/logs writable by connor,***"chmod 777 ."***
 
 Now copied the /bin/bash binary in the host machine to the /var/logs and then ran following commands in container to make it's owner to be root and change it to SUID binary.
 ```bash
