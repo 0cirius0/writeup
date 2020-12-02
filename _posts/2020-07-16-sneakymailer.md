@@ -4,7 +4,7 @@ layout: post
 title: "SneakyMailer"
 subtitle:
 description:
-image: /writeup/asset/img/Sneakymailer/sneakymailer.png
+image: /writeup/assets/img/Sneakymailer/sneakymailer.png
 optimized_image:
 category:
 tags:
